@@ -1,8 +1,7 @@
-var items = 40;
+var items = 39;
 
 $(function () {
     var cols = 4;
-    var rows = Math.ceil(items / cols);
     var template = ` <div class="col pgrid-cell">
             <div class="row justify-content-center">
                 <div class="col-auto">
@@ -30,13 +29,18 @@ $(function () {
             </div>
         </div>`;
 
-    for (var i = 0; i < rows; i++) {
-        var row = $("<div class='row pgrid-row'/>");
-
+    for (var i = 0; i < Math.round(items / cols); i++) {
+        var firstRow = $("<div class='row pgrid-row'/>");
         for (var j = 0; j < cols; j++) {
-            row.append(template);
+            firstRow.append(template);
         }
-
-        $("#pgrid1").append(row);
+        $("#pgrid1").append(firstRow);
     }
+
+    var lastRow = $("<div class='row pgrid-row'/>");
+    for (var j = 0; j < items % cols; j++) {
+        lastRow.append(template);
+    }
+    $("#pgrid1").append(lastRow);
+
 });
