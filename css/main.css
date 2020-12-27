@@ -7,33 +7,9 @@
 }
 
 .pgrid .pgrid-row .pgrid-cell {
-    margin: 20px;
+    margin-top: 40px;
 }
+
 .pgrid .pgrid-row .pgrid-cell .col-auto {
-    margin-right:  -20px;
-}
-
-.pgrid .pgrid-row .pgrid-cell .circle {
-    width: 60px;
-    height: 60px;
-    background: white;
-    border-radius: 60px;
-    box-sizing: border-box;
-    position: relative;
-    text-align: center;
-    padding: 20px;
-}
-
-.pgrid .pgrid-row .pgrid-cell .circle:before {
-    border-radius: 100%;
-    content: '';
-    background-image: linear-gradient(to bottom, #000 0%, #000 100%);
-    padding: 2px;
-    width: 60px;
-    height: 60px;
-    top: -2px;
-    left: -2px;
-    position: absolute;
-    z-index: -1;
-    box-sizing: unset;
+    margin-right: -40px;
 }
